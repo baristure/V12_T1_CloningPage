@@ -593,7 +593,7 @@ nav ul {
   padding: 1rem 0;
 }
 .main-nav li {
-  margin-right: 1.25rem;
+  margin-right: 1rem;
   /* font-weight: 400;*/
 }
 
@@ -602,6 +602,12 @@ nav ul {
   color: #ffd05a;
   background-color: transparent;
   transition: color 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 400px) {
+  .main-nav a {
+    font-size: 1rem;
+  }
 }
 
 .main-nav a:hover {
@@ -812,7 +818,10 @@ footer a {
   }
 }
 
-/*Smooth Scrool*/
+/*Smooth Scroll doesn't work across browsers I fixed it with Javascript*/
+
+/*Smooth Scrool
 html {
   scroll-behavior: smooth;
 }
+*/

@@ -631,7 +631,9 @@ nav ul {
   line-height: 1;
   margin-bottom: 2rem;
 }
-
+strong {
+  font-weight: 600;
+}
 .flex-1 {
   text-align: center;
 

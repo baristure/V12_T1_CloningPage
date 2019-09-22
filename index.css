@@ -760,6 +760,7 @@ footer a {
 
 /* Back to Top Button*/
 .back-to-top {
+  display: none;
   background-color: #ffd05a;
   border: 0px;
   border-radius: 4px;
@@ -773,7 +774,6 @@ footer a {
   right: 1rem;
   text-decoration: none;
   z-index: 99;
-
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
 }

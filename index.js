@@ -14,6 +14,7 @@ Math.easeInOutQuad = function(t, b, c, d) {
   t--;
   return (-c / 2) * (t * (t - 2) - 1) + b;
 };
+
 function easeInOutQuad(t, b, c, d) {
   t /= d / 2;
   if (t < 1) {
@@ -23,23 +24,6 @@ function easeInOutQuad(t, b, c, d) {
   return (-c / 2) * (t * (t - 2) - 1) + b;
 };
 
-Math.easeInCubic = function(t, b, c, d) {
-  var tc = (t /= d) * t * t;
-  return b + c * tc;
-};
-
-function easeInOutCubic(t, b, c, d) {
-  t /= d / 2;
-  if (t < 1) return (c / 2) * t * t * t + b;
-  t -= 2;
-  return (c / 2) * (t * t * t + 2) + b;
-}
-
-Math.inOutQuintic = function(t, b, c, d) {
-  var ts = (t /= d) * t,
-    tc = ts * t;
-  return b + c * (6 * tc * ts + -15 * ts * ts + 10 * tc);
-};
 
 //     Back to Top Button Smooth Effect
 
@@ -90,7 +74,7 @@ function smoothScrollBackToTop() {
     const progress = timestamp - start;
     window.scrollTo(
       0,
-      easeInOutCubic(progress, startPosition, distance, duration)
+      easeInOutQuad(progress, startPosition, distance, duration)
     );
     if (progress < duration) window.requestAnimationFrame(step);
   }
